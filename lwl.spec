@@ -2,11 +2,13 @@ Summary:	Log Writer Library
 Summary(pl):	Biblioteka zapisu do logów
 Name:		lwl
 Version:	0.9
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	http://freesoftware.fsf.org/download/lwl/%{name}-%{version}.tar.gz
 URL:		http://www.freesoftware.fsf.org/lwl/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,7 +26,7 @@ bardzo elastyczny.
 
 %package devel
 Summary:	Header files and development documentation for Log Writer Library
-Summary(pl):	Pliki nag³ówkowe i dokumentacja do biblioteka zapisu do logów
+Summary(pl):	Pliki nag³ówkowe i dokumentacja do biblioteki zapisu do logów
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 
@@ -32,7 +34,7 @@ Requires:	%{name} = %{version}
 Header files and development documentation for Log Writer Library.
 
 %description devel -l pl
-Pliki nag³ówkowe i dokumentacja do biblioteka zapisu do logów.
+Pliki nag³ówkowe i dokumentacja do biblioteki zapisu do logów.
 
 %package static
 Summary:	Static Log Writer Library
@@ -57,7 +59,7 @@ do zmienienia, a jednocze¶nie bardzo elastyczny.
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
@@ -69,11 +71,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
