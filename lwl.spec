@@ -5,8 +5,8 @@ Version:	1.0.0
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://freesoftware.fsf.org/download/lwl/%{name}-%{version}.tar.gz
-# Source0-md5:	1415303aa616d54003bf25650062fa00
+Source0:	http://savannah.nongnu.org/download/lwl/lwl.pkg/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	916ab7de9a23f66fd1873d3c80106914
 URL:		http://www.freesoftware.fsf.org/lwl/
 BuildRequires:	autoconf
 BuildRequires:	automake
