@@ -53,7 +53,6 @@ Statyczna biblioteka zapisu do logów.
 %setup -q
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
@@ -76,7 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README NEWS THANKS
-%attr(755,root,root) %{_libdir}/liblwl.*.*.*
+%attr(755,root,root) %{_libdir}/liblwl.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
@@ -87,4 +86,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files static
 %defattr(644,root,root,755)
-%attr(644,root,root) %{_libdir}/*.a
+%{_libdir}/*.a
