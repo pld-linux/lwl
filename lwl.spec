@@ -1,8 +1,8 @@
 Summary:	Log Writer Library
 Summary(pl):	Biblioteka zapisu do logów
 Name:		lwl
-Version:	0.9
-Release:	3
+Version:	1.0.0
+Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://freesoftware.fsf.org/download/lwl/%{name}-%{version}.tar.gz
