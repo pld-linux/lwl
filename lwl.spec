@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://freesoftware.fsf.org/download/lwl/%{name}-%{version}.tar.gz
+# Source0-md5:	1415303aa616d54003bf25650062fa00
 URL:		http://www.freesoftware.fsf.org/lwl/
 BuildRequires:	autoconf
 BuildRequires:	automake
