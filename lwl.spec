@@ -1,12 +1,12 @@
 Summary:	Log Writer Library
 Summary(pl):	Biblioteka zapisu do logów
 Name:		lwl
-Version:	1.0.0
+Version:	1.1
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://savannah.nongnu.org/download/lwl/%{name}-%{version}.tar.gz
-# Source0-md5:	916ab7de9a23f66fd1873d3c80106914
+# Source0-md5:	b420d15e4b51b94b119a10079b62d31d
 URL:		http://www.nongnu.org/lwl/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -75,12 +75,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README
+%doc AUTHORS ChangeLog README NEWS THANKS
 %attr(755,root,root) %{_libdir}/liblwl.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc src/example.c doc/ref/html/{*.html,*.gif}
+%doc src/example.c doc/html/{*.html,*.png}
 %{_libdir}/*.la
 %{_includedir}/*.h
 %{_mandir}/man3/*
