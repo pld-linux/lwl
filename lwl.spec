@@ -67,7 +67,7 @@ aclocal
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
@@ -77,18 +77,18 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/*.so.*.*
 %doc README
+%attr(755,root,root) %{_libdir}/*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%doc src/example.c doc/ref/html/{*.html,*.gif}
 %attr(755,root,root) %{_libdir}/*.so.*
 %attr(755,root,root) %{_libdir}/*.so
 %attr(755,root,root) %{_libdir}/*.la
 %{_includedir}/*.h
 
 %{_mandir}/man3/*
-%doc src/example.c doc/ref/html/{*.html,*.gif}
 
 %files static
 %defattr(644,root,root,755)
