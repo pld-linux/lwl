@@ -2,7 +2,7 @@ Summary:	Log Writer Library
 Summary(pl):	Biblioteka zapisu do logów
 Name:		lwl
 Version:	0.9
-Release:	1
+Release:	0.1
 License:	GPL
 Group:		Applications/System
 Source0:	http://freesoftware.fsf.org/download/lwl/%{name}-%{version}.tar.gz
@@ -86,7 +86,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/*.so
 %attr(755,root,root) %{_libdir}/*.la
 %{_includedir}/*.h
+
 %{_mandir}/man3/*
+%doc src/example.c
 
 %files static
 %defattr(644,root,root,755)
