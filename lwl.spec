@@ -4,10 +4,10 @@ Name:		lwl
 Version:	1.0.0
 Release:	1
 License:	GPL
-Group:		Applications/System
-Source0:	http://savannah.nongnu.org/download/lwl/lwl.pkg/%{version}/%{name}-%{version}.tar.gz
+Group:		Libraries
+Source0:	http://savannah.nongnu.org/download/lwl/%{name}-%{version}.tar.gz
 # Source0-md5:	916ab7de9a23f66fd1873d3c80106914
-URL:		http://www.freesoftware.fsf.org/lwl/
+URL:		http://www.nongnu.org/lwl/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -20,7 +20,7 @@ customizable.
 
 %description -l pl
 Biblioteka zapisu do logów (Log Writer Library - LWL) jest przeno¶n±
-bibliotek± dla programistów pisz±cych w C. Dostacza funkcje
+bibliotek± dla programistów pisz±cych w C. Dostarcza funkcje
 pozwalaj±ce logowaæ do plików przez programy, czy demony. Format
 logowanych wiadomo¶ci jest bardzo ³atwy do zmienienia, a jednocze¶nie
 bardzo elastyczny.
@@ -29,7 +29,7 @@ bardzo elastyczny.
 Summary:	Header files and development documentation for Log Writer Library
 Summary(pl):	Pliki nag³ówkowe i dokumentacja do biblioteki zapisu do logów
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files and development documentation for Log Writer Library.
@@ -41,19 +41,13 @@ Pliki nag³ówkowe i dokumentacja do biblioteki zapisu do logów.
 Summary:	Static Log Writer Library
 Summary(pl):	Statyczna biblioteka zapisu do logów
 Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-Static Log Writer Library. Log Writer Library (LWL) is a portable
-library for C programmers. It provides functions to log messages to
-files from programs such as daemons. The format of logged messages is
-highly and easily customizable.
+Static Log Writer Library.
 
 %description static -l pl
-Statyczna biblioteka zapisu do logów. Biblioteka zapisu do logów (Log
-Writer Library - LWL) jest przeno¶n± bibliotek± dla programistów
-pisz±cych w C. Dostacza funkcje pozwalaj±ce logowaæ do plików przez
-programy, czy demony. Format logowanych wiadomo¶ci jest bardzo ³atwy
-do zmienienia, a jednocze¶nie bardzo elastyczny.
+Statyczna biblioteka zapisu do logów.
 
 %prep
 %setup -q
@@ -70,7 +64,8 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -81,16 +76,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%attr(755,root,root) %{_libdir}/*.so.*.*
+%attr(755,root,root) %{_libdir}/liblwl.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %doc src/example.c doc/ref/html/{*.html,*.gif}
-%attr(755,root,root) %{_libdir}/*.so.?
-%attr(755,root,root) %{_libdir}/*.so
 %{_libdir}/*.la
 %{_includedir}/*.h
-
 %{_mandir}/man3/*
 
 %files static
