@@ -88,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/*.h
 
 %{_mandir}/man3/*
-%doc src/example.c
+%doc src/example.c doc/ref/html/{*.html,*.gif}
 
 %files static
 %defattr(644,root,root,755)
