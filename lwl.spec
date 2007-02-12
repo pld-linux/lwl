@@ -1,5 +1,5 @@
 Summary:	Log Writer Library
-Summary(pl):	Biblioteka zapisu do logów
+Summary(pl.UTF-8):   Biblioteka zapisu do logÃ³w
 Name:		lwl
 Version:	1.1
 Release:	1
@@ -18,36 +18,36 @@ provides functions to log messages to files from programs such as
 daemons. The format of logged messages is highly and easily
 customizable.
 
-%description -l pl
-Biblioteka zapisu do logów (Log Writer Library - LWL) jest przeno¶n±
-bibliotek± dla programistów pisz±cych w C. Dostarcza funkcje
-pozwalaj±ce logowaæ do plików przez programy, czy demony. Format
-logowanych wiadomo¶ci jest bardzo ³atwy do zmienienia, a jednocze¶nie
+%description -l pl.UTF-8
+Biblioteka zapisu do logÃ³w (Log Writer Library - LWL) jest przenoÅ›nÄ…
+bibliotekÄ… dla programistÃ³w piszÄ…cych w C. Dostarcza funkcje
+pozwalajÄ…ce logowaÄ‡ do plikÃ³w przez programy, czy demony. Format
+logowanych wiadomoÅ›ci jest bardzo Å‚atwy do zmienienia, a jednoczeÅ›nie
 bardzo elastyczny.
 
 %package devel
 Summary:	Header files and development documentation for Log Writer Library
-Summary(pl):	Pliki nag³ówkowe i dokumentacja do biblioteki zapisu do logów
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i dokumentacja do biblioteki zapisu do logÃ³w
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files and development documentation for Log Writer Library.
 
-%description devel -l pl
-Pliki nag³ówkowe i dokumentacja do biblioteki zapisu do logów.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe i dokumentacja do biblioteki zapisu do logÃ³w.
 
 %package static
 Summary:	Static Log Writer Library
-Summary(pl):	Statyczna biblioteka zapisu do logów
+Summary(pl.UTF-8):   Statyczna biblioteka zapisu do logÃ³w
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Log Writer Library.
 
-%description static -l pl
-Statyczna biblioteka zapisu do logów.
+%description static -l pl.UTF-8
+Statyczna biblioteka zapisu do logÃ³w.
 
 %prep
 %setup -q
