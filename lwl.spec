@@ -1,5 +1,5 @@
 Summary:	Log Writer Library
-Summary(pl.UTF-8):   Biblioteka zapisu do logów
+Summary(pl.UTF-8):	Biblioteka zapisu do logów
 Name:		lwl
 Version:	1.1
 Release:	1
@@ -27,7 +27,7 @@ bardzo elastyczny.
 
 %package devel
 Summary:	Header files and development documentation for Log Writer Library
-Summary(pl.UTF-8):   Pliki nagłówkowe i dokumentacja do biblioteki zapisu do logów
+Summary(pl.UTF-8):	Pliki nagłówkowe i dokumentacja do biblioteki zapisu do logów
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -39,7 +39,7 @@ Pliki nagłówkowe i dokumentacja do biblioteki zapisu do logów.
 
 %package static
 Summary:	Static Log Writer Library
-Summary(pl.UTF-8):   Statyczna biblioteka zapisu do logów
+Summary(pl.UTF-8):	Statyczna biblioteka zapisu do logów
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
